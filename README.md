@@ -95,6 +95,66 @@ Next, we install MariaDB:
 ```console
 sudo apt install mariadb-server
 ```
+Now, open MariaDB:
+```console
+sudo mariadb
+```
+Congratulations, you can now run SQL commands. Set up your users and permissions at this stage.
+
+
+This is a basic format for setting up users in SQL:
+
+```sql
+CREATE USER 'your_username'@'%' IDENTIFIED BY 'your_password';
+```
+Replace the usernames and passwords to your liking. The "%" sign indicates that the user can connect using any IP address. 
+
+If you want to limit it to one IP-address, you can do so by replacing the "%" sign with the IP address the user will connect from.
+
+Now, we'll set up permissions for this user.
+
+```sql
+GRANT ALL PRIVILEGES ON *.* TO 'your_username'@'%';
+```
+You can limit the permissions to your liking, in this example' we're giving all permissions to this user.
+
+If you want to limit the user's access to specific databases, you can replace the star signs with your database and table.
+
+For example, if you want the user to have permissions on "main_db" database on the "users" table, you set it to main_db.users
+
+Lastly, we "flush" privileges to save our changes.
+```sql
+FLUSH PRIVILEGES;
+```
+
+## 4. Connect to MariaDB on an external client
+Now, we're gonna connect to our MariaDB server with a python script.
+We're gonna be using the mysql-connector library for this.
+
+
+First, make sure you have Python installed on your machine, and in PATH. Then, open CMD, and install the mysql-connector library:
+```console
+pip install mysql-connector-python
+```
+
+Now, in our python script, lets set up the connection to our server:
+```python
+import mysql.connector
+
+connection = mysql.connector.connect(
+    host="10.x.x.x", #Your Pi's local IP address
+    user="your_username", #The user you set up previosuly that you want the script to use
+    password="your_password", #The password for the user
+    database="your_database" #The database you want the script to use
+)
+
+cursor = connection.cursor() #To run SQL commands, we use the connection.cursor() function
+
+cursor.execute("YOUR SQL COMMAND HERE")
+```
+<br>
+
+## Congratulations, you have now connected your python script to a MariaDB server running on a Raspberry Pi.
 
 
 
