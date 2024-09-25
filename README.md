@@ -1,6 +1,5 @@
-# telefonkatalog_instruks
 
-## In this instruction, we will:
+## In this tutorial, we will:
 1. Install Ubuntu with RPI Imager
 2. Set up RPI with SSH 
 3. Install MariaDB on RPI
