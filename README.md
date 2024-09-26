@@ -1,4 +1,4 @@
-#How to install Ubuntu and MariaDB on Raspberry Pi, and connect to it using Python
+# How to install Ubuntu and MariaDB on Raspberry Pi, and connect to it using Python
 
 
 ## In this tutorial, we will:
