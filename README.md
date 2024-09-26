@@ -47,7 +47,7 @@ Then you'll see your private IP, after "INET". Your private IP always follows th
 ## 2. RPI SSH Setup
 
 In order to install the openssh package, first we update the package list. To do this, run the following command in the terminal:
-```shell
+```console
 sudo apt update
 ```
 Afterwards, install the openssh-server package:
