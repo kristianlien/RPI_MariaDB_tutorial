@@ -32,7 +32,7 @@ Download the Ubuntu version appropriate for your device. For most Pi models, the
 After choosing your OS, run through the RPI imaging software. **Note that the installation process will wipe all data on the SD card.**
 
 When the OS is written and verified on the SD Card, you will get a popup in the software.
-![Screenshot of popup in the rpi imager, saying "Write successfull, you can now remove the SD card from the reader, along with OS version](https://files.catbox.moe/c3l40x.png)
+![Screenshot of popup in the rpi imager, saying "Write successful, you can now remove the SD card from the reader, along with OS version](https://files.catbox.moe/c3l40x.png)
 
 Now, eject the SD card and install it in your Raspberry Pi and turn it on. For initial setup, you will have to connect the Pi to a keyboard and a screen. After Ubuntu setup, we can use SSH.
 
