@@ -36,7 +36,7 @@ When the OS is written and verified on the SD Card, you will get a popup in the 
 
 Now, eject the SD card and install it in your Raspberry Pi and turn it on. For initial setup, you will have to connect the Pi to a keyboard and a screen. After Ubuntu setup, we can use SSH.
 
-Run trough the Ubuntu Setup on your Pi. Make sure to connect the Pi to a network, as this is needed to SSH. The network doesn't need internet access.
+Run through the Ubuntu Setup on your Pi. Make sure to connect the Pi to a network, as this is needed to SSH. The network doesn't need internet access.
 
 After Ubuntu is setup, do CTRL+ALT+T to open the terminal and type in:
 
